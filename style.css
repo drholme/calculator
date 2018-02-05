@@ -1,0 +1,68 @@
+/*
+ * Darnita Holmes and Sheree Good
+ * drholme.it.pointapark.edu
+ * sbgood.it.pointpark.edu
+ * Module 4: Working with Multiple People: Slack and GitHub (Project 2a)
+ *Need to fix padding and square screen. Display font not white
+*/
+
+
+/* ✓ Div */
+#calculate{
+    color: white;
+    float: left;
+    width: 261px;
+    margin-left: : 30px;
+}
+
+
+/* ✓ Header */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Arial', cursive;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 30px;
+    color: pink;
+    float: left;
+    margin-left:75px;
+    margin-top:20px;
+
+}
+
+input[name="display"] {
+    color: white;
+    height: 60px;
+    text-align: right;
+    width: 254px;
+    background-color: pink;
+    font-size:30px;
+ }
+
+/* ✓ buttons 0-9; /, *, -, +, =  */
+input[type="button"] {
+    color: white;
+    height: 60px;
+    font-size:30px;
+    text-align: center;
+    border-radius:8px;
+    background-color:tan;
+    width: 60px;
+
+}
+
+/* ✓ Clear button*/
+#button_Clear {
+    color: white;
+    height: 60px;
+    text-align: center;
+    width: 190px;
+    background-color:tan;
+    border-radius: 8px;
+    font-size:30px;
+    margin-top: 3px;
+}
