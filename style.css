@@ -29,9 +29,9 @@ h6 {
     font-size: 30px;
     color: pink;
     float: left;
-    margin-left:75px;
-    margin-top:20px;
-
+    margin-left: 50px;
+    margin-bottom: auto;
+    
 }
 
 input[name="display"] {
@@ -41,6 +41,7 @@ input[name="display"] {
     width: 254px;
     background-color: pink;
     font-size:30px;
+    margin: 1px;	
  }
 
 /* ✓ buttons 0-9; /, *, -, +, =  */
@@ -52,6 +53,7 @@ input[type="button"] {
     border-radius:8px;
     background-color:tan;
     width: 60px;
+    margin: 1px;		
 
 }
 
@@ -60,7 +62,7 @@ input[type="button"] {
     color: white;
     height: 60px;
     text-align: center;
-    width: 190px;
+    width: 192px;
     background-color:tan;
     border-radius: 8px;
     font-size:30px;
