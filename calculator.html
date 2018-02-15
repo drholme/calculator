@@ -47,7 +47,7 @@
         <input type="button" value="4" onclick="calculator.addNumber(4)" />
         <input type="button" value="5" onclick="calculator.addNumber(5)" />
         <input type="button" value="6" onclick="calculator.addNumber(6)" />
-        <input type="button" value="-" id="sub" onclick="subtract()" />
+        <input type="button" value="-" id="sub" onclick="calculator.subtract()" /> <!-- updated -->
         <br>
         <input type="button" value="1" onclick="calculator.addNumber(1)" />
         <input type="button" value="2" onclick="calculator.addNumber(2)" />
@@ -59,10 +59,14 @@
         <input type="button" value="." onclick="calculator.decimal()" />
         <input type="button" value=&#247 id="divi" onclick="calculator.divide()" />
         <br>
-        <input type="button" value="Clear" onclick="clearing.clearBtn()" id="button_Clear" />
-        <input type="button" value="=" onclick="formula = eval(formula)" />
+        <input type="button" value="Clear" id="button_Clear" onclick="calculator.clearBtn()" />
+        <input type="button" value="=" id="sol" onclick="calculator = calculator.solution()" />   // DH <!-- updated -->
         <br>
       </form>
     </div>
   </body>
+
+<!--Error bank: Follwing due to not having "calculator. infront of subtract"
+Uncaught ReferenceError: subtract is not defined
+    at HTMLInputElement.onclick (calculator.html:50) -->
 </html>
