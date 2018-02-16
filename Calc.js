@@ -1,5 +1,6 @@
 // This is he model
 //No HTML or CSS in this area -just javascript
+// need to work on % and undefined
 
 //Error Troubleshooting bank:
 //Following example caused by lack of notify within function
@@ -51,13 +52,15 @@ var calculator = (function() {
   console.log("Add!!!");
     //eval(formula);
     formula += "+";
-    //return sum;
+    notify(formula); // DH
+
   }
 
   function subtract() {
   //teting with console
   console.log(" Subract!!!");
     formula += "-";
+    notify(formula); // DH
   }
 
 
@@ -65,24 +68,28 @@ var calculator = (function() {
   //teting with console
   console.log("Multiply!!!");
     formula += "*";
+    notify(formula); // DH
   }
 
   function divide() {
   //teting with console
   console.log("Divide!!!");
     formula += "/";
+    notify(formula); // DH
   }
 
   function percent() {
   //teting with console
   console.log("Percent!!!");
     formula += "%";
+    notify(formula); // DH
   }
 
   function decimal() {
   //teting with console
   console.log("Decimal!!!");
     formula += ".";
+    notify(formula); // DH
   }
 
   ///needs another notify
@@ -100,12 +107,11 @@ var calculator = (function() {
   console.log("formula = ", formula );//DH
   console.log(eval(formula)); //updated
   var ans = eval(formula); //updated
-  console.log("Answer = ",  formula += " = " + ans );//DH
+  console.log("Answer = ",  formula += " = " + ans );//updated
+  document.getElementById('History').innerHTML += formula + "<br/>"; //DH
   formula = ans;  //updated
   notify(formula);//updated
-
-  //code to add "clear funciton here if no other
-  //operators are presed
+  formula = ""; //DH //had this initally but removed (was needed)
 }
 
 

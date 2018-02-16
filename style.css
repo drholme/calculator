@@ -15,6 +15,17 @@
     margin-left: : 30px;
 }
 
+/* ✓ History Div - updated  */
+#His{
+    color: black;
+    float: left;
+    width: 261px;
+    border:3px solid tan;
+    overflow: hidden;
+    list-style: none;
+    margin-left: 30px;
+}
+
 
 /* ✓ Header */
 h1,
@@ -31,7 +42,7 @@ h6 {
     float: left;
     margin-left: 50px;
     margin-bottom: auto;
-    
+
 }
 
 input[name="display"] {
@@ -41,7 +52,7 @@ input[name="display"] {
     width: 254px;
     background-color: pink;
     font-size:30px;
-    margin: 1px;	
+    margin: 1px;
  }
 
 /* ✓ buttons 0-9; /, *, -, +, =  */
@@ -53,7 +64,7 @@ input[type="button"] {
     border-radius:8px;
     background-color:tan;
     width: 60px;
-    margin: 1px;		
+    margin: 1px;
 
 }
 
@@ -68,3 +79,20 @@ input[type="button"] {
     font-size:30px;
     margin-top: 3px;
 }
+
+ /* added and updated  to rmeove bullets*/
+ul {
+
+    list-style: none; /* updated */
+ }
+
+ /* Id used for History location -tutoring assistance */
+input[name="History"] {
+    color: black;
+    height: 600px;
+    text-align: right;
+    width: 254px;
+    background-color: pink;
+    font-size:30px;
+    margin: 1px;
+ }
