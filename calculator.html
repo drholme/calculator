@@ -23,15 +23,8 @@
         $("#display").val(num);
       });
     });
-
-    //listener for Clearing portion of UI
-    /*$(function() {
-      clearing.listen(function(num) {
-        $("#display").val(num);
-      });
-    });*/
-
     </script>
+
   </head>
   <body>
     <div id="calculate">
@@ -63,10 +56,19 @@
         <input type="button" value="=" id="sol" onclick="calculator.solution()" />   // DH <!-- updated -->
         <br>
       </form>
-    </div>
+      </div>
+      <div id="His">
+        <h3>History</h3>
+        <form name="HistoryBox">
+          <ul>
+            <input id="Test" name="Testing" placeholder="Enter your name" />
+            <li id="History"></li>
+          </ul>
+        </form>
+      </div>
   </body>
 
-<!--Error bank: Follwing due to not having "calculator. infront of subtract"
-Uncaught ReferenceError: subtract is not defined
-    at HTMLInputElement.onclick (calculator.html:50) -->
+      <!--Error bank: Follwing due to not having "calculator. infront of subtract"
+      Uncaught ReferenceError: subtract is not defined
+          at HTMLInputElement.onclick (calculator.html:50) -->
 </html>
