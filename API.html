@@ -12,80 +12,81 @@
   </style>
 </head>
 <body>
+  <p>&lt;!doctype html&gt;</p>
   <h2>Calculator API Documentation</h2>
   <div>
   <pre id="m_-185869481745344958gmail-m_4907678454440190855m_-2762423055603973228gmail-line1">&nbsp;</pre>
   </div>
   <p>This API is for a basic calculator. The game simply implements Tic Tac Toe for two players. When you include Calc.js a global variable is created called calculator. All methods should be called on this object. For example, we can insert the number 3 using the <strong>calculator.addNumber(3)</strong> Below you can find the API:<br /><br /></p>
   <table>
-  <tbody>
-  <tr>
-  <td>Method Name</td>
-  <td>Parameters</td>
-  <td>Return Value</td>
-  <td>Description</td>
-  </tr>
-  <tr>
-  <td><a class="m_-185869481745344958gmail-m_4907678454440190855m_-2762423055603973228gmail-attribute-value">addNumber(#)</a></td>
-  <td><em>#:</em> specifies which button is pressed and should be used in the formula. It should be specified as a number 1-9.</td>
-  <td>The number entered in the parentheses</td>
-  <td>This method allows the user to&nbsp;insert a number in the display, based on the button associated&nbsp;with that number.&nbsp;</td>
-  </tr>
-  <tr>
-  <td>add()</td>
-  <td>The selector is used to select and manipulate HTML element(s) by their Id's.</td>
-  <td>+</td>
-  <td>This method adds the numeric operand to or concatenates with the variable formula.&nbsp;</td>
-  </tr>
-  <tr>
-  <td>subtract()</td>
-  <td>The selector is used to select and manipulate HTML element(s) by their Id's.</td>
-  <td>-</td>
-  <td>This method subtracts the numeric operand or concatenates with the variable formula.&nbsp;</td>
-  </tr>
-  <tr>
-  <td>multiply()</td>
-  <td>&nbsp;The selector is used to select and manipulate HTML element(s) by their Id's.</td>
-  <td>*</td>
-  <td>This method multiplies the numeric operand or concatenates with the variable formula.&nbsp;</td>
-  </tr>
-  <tr>
-  <td>divide()</td>
-  <td>&nbsp;The selector is used to select and manipulate HTML element(s) by their Id's.</td>
-  <td>/</td>
-  <td>This method divides the numeric operand or concatenates with the variable formula.&nbsp;</td>
-  </tr>
-  <tr>
-  <td>percent()</td>
-  <td>&nbsp;The selector is used to select and manipulate HTML element(s) by their Id's.</td>
-  <td>%</td>
-  <td>This method concatenates the modulus so that the remainder can be returned&nbsp;when the first operand is divided by the second operand.</td>
-  </tr>
-  <tr>
-  <td>clearBtn()</td>
-  <td>&nbsp;The selector is used to select and manipulate HTML element(s) by their Id's.</td>
-  <td>None</td>
-  <td>&nbsp;This method allows the user clear the display UI of the calculator.&nbsp;</td>
-  </tr>
-  <tr>
-  <td>solution()</td>
-  <td>&nbsp;The selector is used to select and manipulate HTML element(s) by their Id's.</td>
-  <td>The result of the expression</td>
-  <td>This method allows the user to return the solution of "formula" using the eval(formula) function. Eavl will try to convert the string input to a number first, where applicable. The answer is then inserted in the calculator&nbsp;display&nbsp;UI.&nbsp;</td>
-  </tr>
-  <tr>
-  <td>listen(cb)</td>
-  <td><em>cb:</em> is the callback function. This function will be called whenever a button is pressed. The buttons clicked are passed to the callback function</td>
-  <td>None</td>
-  <td>The listen(cb) functionality is used to track the change in the model and receive notifications. This allows the UI to be updated when the model changes.</td>
-  </tr>
-  <tr>
-  <td>notify(num, formula)</td>
-  <td>num and formula are the callback functions. We&nbsp;iterate through the array and call the listen&nbsp;</td>
-  <td>None</td>
-  <td>Notify all listeners of a change in num and formula</td>
-  </tr>
-  </tbody>
+    <tbody>
+      <tr>
+        <td>Method Name</td>
+        <td>Parameters</td>
+        <td>Return Value</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td><a class="m_-185869481745344958gmail-m_4907678454440190855m_-2762423055603973228gmail-attribute-value">addNumber(digit)</a></td>
+        <td>digit specifies which button is pressed and should be used in the formula. It should be specified as a digit1-9.</td>
+        <td>None</td>
+        <td>This method allows the user to&nbsp;insert a number in the display, based on the button associated&nbsp;with that number.&nbsp;</td>
+      </tr>
+      <tr>
+        <td>add()</td>
+        <td>The selector is used to select and manipulate HTML element(s) by their Id's.</td>
+        <td>None</td>
+        <td>This method adds the numeric operand to or concatenates with the variable formula.&nbsp;</td>
+      </tr>
+        <tr>
+        <td>subtract()</td>
+        <td>The selector is used to select and manipulate HTML element(s) by their Id's.</td>
+        <td>None</td>
+        <td>This method subtracts the numeric operand or concatenates with the variable formula.&nbsp;</td>
+      </tr>
+      <tr>
+        <td>multiply()</td>
+        <td>&nbsp;The selector is used to select and manipulate HTML element(s) by their Id's.</td>
+        <td>None</td>
+        <td>This method multiplies the numeric operand or concatenates with the variable formula.&nbsp;</td>
+      </tr>
+      <tr>
+        <td>divide()</td>
+        <td>&nbsp;The selector is used to select and manipulate HTML element(s) by their Id's.</td>
+        <td>None</td>
+        <td>This method divides the numeric operand or concatenates with the variable formula.&nbsp;</td>
+      </tr>
+      <tr>
+      <td>percent()</td>
+        <td>&nbsp;The selector is used to select and manipulate HTML element(s) by their Id's.</td>
+        <td>None</td>
+        <td>This method concatenates the modulus so that the remainder can be returned&nbsp;when the first operand is divided by the second operand.</td>
+      </tr>
+      <tr>
+        <td>clearBtn()</td>
+        <td>&nbsp;The selector is used to select and manipulate HTML element(s) by their Id's.</td>
+        <td>None</td>
+        <td>&nbsp;This method allows the user clear the display UI of the calculator.&nbsp;</td>
+      </tr>
+      <tr>
+      <td>solution()</td>
+        <td>&nbsp;The selector is used to select and manipulate HTML element(s) by their Id's.</td>
+        <td>None</td>
+        <td>This method allows the user to return the solution of "formula" using the eval(formula) function. Eavl will try to convert the string input to a number first, where applicable. The answer is then inserted in the calculator&nbsp;display&nbsp;UI.&nbsp;</td>
+      </tr>
+      <tr>
+        <td>listen(cb)</td>
+        <td><em>cb:</em> is the callback function. This function will iterate through the array and listen&nbsp;to and pass in num and formula.</td>
+        <td>None</td>
+        <td>The listen(cb) functionality is used to track the change in the model and receive notifications. This allows the UI to be updated when the model changes.</td>
+      </tr>
+      <tr>
+        <td>notify(num, formula)</td>
+        <td>Whenever a button is pressed, notify and initializes and starts the cb.</td>
+        <td>None</td>
+        <td>Notify all listeners of a change in num and formula</td>
+      </tr>
+    </tbody>
   </table>
 </body>
 </html>
