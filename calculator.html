@@ -19,12 +19,17 @@
     <!-- Listener for calcualtion UI -->
     <script>
     $(function() {
-      calculator.listen(function(num) {
+      calculator.listen(function(num, formula) {
         $("#display").val(num);
+        if (formula) {
+          //$("#History").empty();
+          $("#History").append(formula+"<br>");
+          //$("#History").append(calculator.getFormula());
+        }
+
       });
     });
     </script>
-
   </head>
   <body>
     <div id="calculate">
@@ -57,18 +62,18 @@
         <br>
       </form>
       </div>
-      <div id="His">
-        <h3>History</h3>
-        <form name="HistoryBox">
-          <ul>
-            <input id="Test" name="Testing" placeholder="Enter your name" />
-            <li id="History"></li>
-          </ul>
-        </form>
-      </div>
+    <div id="His">
+      <h3>History</h3>
+      <form name="calcForm">
+      <ul>
+          <input id="Test" name="Test" placeholder="Press Enter to clear" />
+          <li id="History"></li>
+      </ul>
+      </form>
+    </div>
   </body>
 
-      <!--Error bank: Follwing due to not having "calculator. infront of subtract"
-      Uncaught ReferenceError: subtract is not defined
-          at HTMLInputElement.onclick (calculator.html:50) -->
+<!--Error bank: Follwing due to not having "calculator. infront of subtract"
+Uncaught ReferenceError: subtract is not defined
+    at HTMLInputElement.onclick (calculator.html:50) -->
 </html>

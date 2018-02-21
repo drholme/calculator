@@ -1,6 +1,5 @@
 // This is he model
 //No HTML or CSS in this area -just javascript
-// need to work on % and undefined
 
 //Error Troubleshooting bank:
 //Following example caused by lack of notify within function
@@ -23,18 +22,6 @@ var calculator = (function() {
   //At first, this was stand alone and used the commented next insted of empty string
   var formula = ""; //document.calculator.display.value;
 
-  //I had this already without Prof. V help and was the only thing that was right
-  function addListeners() {
-    document.getElementById('sub').addEventListener('click', subtract);
-    document.getElementById('mult').addEventListener('click', multiply);
-    document.getElementById('adding').addEventListener('click', add);
-    document.getElementById('divi').addEventListener('click', divide);
-    document.getElementById('deci').addEventListener('click', decimal);
-    document.getElementById('perc').addEventListener('click', percent);
-    document.getElementById('button_Clear').addEventListener('click', clearBtn);  //updated: uncommented this
-    document.getElementById('sol').addEventListener('click', solution);
-  }
-
   // I was missing this and it was needed
   function addNumber(num) {
     console.log("addNumber!!");
@@ -53,7 +40,7 @@ var calculator = (function() {
     //eval(formula);
     formula += "+";
     notify(formula); // DH
-
+    //return sum;
   }
 
   function subtract() {
@@ -61,7 +48,7 @@ var calculator = (function() {
   console.log(" Subract!!!");
     formula += "-";
     notify(formula); // DH
-  }
+}
 
 
   function multiply() {
@@ -69,28 +56,29 @@ var calculator = (function() {
   console.log("Multiply!!!");
     formula += "*";
     notify(formula); // DH
-  }
+}
 
   function divide() {
   //teting with console
   console.log("Divide!!!");
     formula += "/";
     notify(formula); // DH
-  }
+}
+
 
   function percent() {
   //teting with console
   console.log("Percent!!!");
     formula += "%";
     notify(formula); // DH
-  }
+}
 
   function decimal() {
   //teting with console
   console.log("Decimal!!!");
     formula += ".";
     notify(formula); // DH
-  }
+}
 
   ///needs another notify
   function clearBtn() {
@@ -102,18 +90,21 @@ var calculator = (function() {
 
   //need new notify
   function solution() {
-  //teting with console
-  console.log("Soultion");
-  console.log("formula = ", formula );//DH
-  console.log(eval(formula)); //updated
-  var ans = eval(formula); //updated
-  console.log("Answer = ",  formula += " = " + ans );//updated
-  document.getElementById('History').innerHTML += formula + "<br/>"; //DH
-  formula = ans;  //updated
-  notify(formula);//updated
-  formula = ""; //DH //had this initally but removed (was needed)
-}
+    //teting with console
+    console.log("Soultion");
+    console.log("formula = ", formula );//DH
+    console.log(eval(formula)); //updated
+    var ans = eval(formula); //updated
+    console.log("Answer = ", formula += " = " + ans);//updated
+    //formula = ans;  //updated
+    notify(ans, formula);//updated
+    formula = "";     // clear display area for next calculation  // DH
+  }
 
+  function  getFormula() {
+    return formula;
+
+  }
 
   //the listeners code was taken directly from the tictactoe js file
   var listeners = [];
@@ -125,14 +116,13 @@ var calculator = (function() {
   }
 
   // notify all listeners of a change to the grid
-  function notify(num) {
+  function notify(num, formula) {
     // iterate through the array and call the listen callback function
     for (var i = 0; i < listeners.length; i++) {
       // call the function
-      listeners[i](num);
+      listeners[i](num, formula);
     }
   }
-
 
   //Not having these correct will give: calculatorhtml:##
   //Uncaught TypeError:
@@ -146,6 +136,7 @@ var calculator = (function() {
     solution:solution,
     decimal: decimal, //updated (missing)
     clearBtn: clearBtn, //updated (missing)
-    listen: listen
+    listen: listen,
+    getFormula: getFormula
   };
 })();
